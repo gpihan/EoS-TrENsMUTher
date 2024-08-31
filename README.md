@@ -1,6 +1,7 @@
-# EoS-TrENsMUTher
 ![Alt text](/image/Cover.png?raw=true "Optional Title")
 
-Equation of State TrENslator for MUltivariable Thermodynamics in High Energy Reactions 
+# Description 
+Equation of State TrENslator for MUltivariable Thermodynamics in High Energy Reactions
+
 This code translate an Equation of State expressed in terms of thermodynamic variables 
 into tables express in terms of dynamic variables. 
