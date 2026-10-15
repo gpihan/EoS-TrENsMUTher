@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "name": "New 2D EoS table",
+  "table_revision": "replace-with-data-revision",
+  "description": "Short scientific description of the table.",
+  "dimension": 2,
+  "data_file": "table.dat",
+  "format": {
+    "delimiter": "whitespace",
+    "comment_prefix": "#",
+    "skip_rows": 0,
+    "encoding": "utf-8",
+    "expected_columns": 5,
+    "missing_values": []
+  },
+  "fields": {
+    "T": {
+      "role": "coordinate",
+      "column": 0,
+      "source_unit": "MeV",
+      "canonical_unit": "GeV",
+      "transform": {
+        "scale_factor": 0.001,
+        "temperature_power": 0,
+        "hbarc_power": 0
+      },
+      "nonfinite_policy": "forbid",
+      "output": true,
+      "interpolation": "linear",
+      "source_label": "T",
+      "stored_as": "T",
+      "description": "Temperature"
+    },
+    "muB": {
+      "role": "coordinate",
+      "column": 1,
+      "source_unit": "MeV",
+      "canonical_unit": "GeV",
+      "transform": {
+        "scale_factor": 0.001,
+        "temperature_power": 0,
+        "hbarc_power": 0
+      },
+      "nonfinite_policy": "forbid",
+      "output": true,
+      "interpolation": "linear",
+      "source_label": "muB",
+      "stored_as": "muB",
+      "description": "Baryon chemical potential"
+    },
+    "e": {
+      "role": "target",
+      "column": 2,
+      "source_unit": "MeV/fm^3",
+      "canonical_unit": "GeV^4",
+      "transform": {
+        "scale_factor": 0.001,
+        "temperature_power": 0,
+        "hbarc_power": 3
+      },
+      "nonfinite_policy": "forbid",
+      "output": true,
+      "interpolation": "linear",
+      "source_label": "e",
+      "stored_as": "e",
+      "description": "Energy density"
+    },
+    "nB": {
+      "role": "target",
+      "column": 3,
+      "source_unit": "fm^-3",
+      "canonical_unit": "GeV^3",
+      "transform": {
+        "scale_factor": 1.0,
+        "temperature_power": 0,
+        "hbarc_power": 3
+      },
+      "nonfinite_policy": "forbid",
+      "output": true,
+      "interpolation": "linear",
+      "source_label": "nB",
+      "stored_as": "nB",
+      "description": "Net baryon density"
+    },
+    "P": {
+      "role": "auxiliary",
+      "column": 4,
+      "source_unit": "MeV/fm^3",
+      "canonical_unit": "GeV^4",
+      "transform": {
+        "scale_factor": 0.001,
+        "temperature_power": 0,
+        "hbarc_power": 3
+      },
+      "nonfinite_policy": "forbid",
+      "output": true,
+      "interpolation": "linear",
+      "source_label": "P",
+      "stored_as": "P",
+      "description": "Pressure"
+    }
+  },
+  "grid": {
+    "kind": "rectilinear",
+    "require_complete": true,
+    "require_uniform": false,
+    "reorder": true,
+    "duplicate_policy": "error",
+    "absolute_tolerance": 1e-12,
+    "relative_tolerance": 1e-10,
+    "min_axis_points": 2,
+    "expected_shape": [221, 801],
+    "expected_bounds": {
+      "T": [0.08, 0.30],
+      "muB": [0.0, 0.80]
+    },
+    "expected_spacing": {
+      "T": 0.001,
+      "muB": 0.001
+    }
+  },
+  "charge_constraints": {
+    "model": "linear_homogeneous",
+    "dependent_densities": {
+      "nQ": {"nB": 0.4},
+      "nS": {}
+    },
+    "validation": {
+      "absolute_tolerance": 1e-12,
+      "relative_tolerance": 1e-8
+    }
+  },
+  "scientific": {
+    "description": "Physical model and intended use.",
+    "origin": {
+      "generator": "replace with generator",
+      "converter": "replace with conversion program or remove",
+      "version": "replace with generator/data version",
+      "url": "https://example.invalid/replace-or-remove"
+    },
+    "publications": [
+      {
+        "type": "article",
+        "title": "Replace with publication title",
+        "authors": ["Replace with author list or remove"],
+        "doi": "replace-or-remove",
+        "arxiv": "replace-or-remove",
+        "url": "https://example.invalid/replace-or-remove"
+      }
+    ],
+    "constraints": ["nQ = 0.4 nB", "nS = 0"],
+    "validity": {
+      "status": "replace with documented validity",
+      "notes": "State the scientifically valid domain and known caveats."
+    },
+    "phase_structure": {
+      "status": "known",
+      "critical_points": [
+        {
+          "name": "example-critical-point",
+          "status": "approximate",
+          "location": {
+            "T": {"value": 0.15, "unit": "GeV"},
+            "muB": {"value": 0.35, "unit": "GeV"}
+          },
+          "note": "Replace with evidence or remove the example point."
+        }
+      ],
+      "first_order_transition": {
+        "present": false
+      }
+    },
+    "open_questions": [
+      "Replace with unresolved provenance or physics questions, or use an empty list."
+    ]
+  }
+}

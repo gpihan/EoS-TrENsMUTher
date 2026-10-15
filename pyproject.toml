@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eos-trensmuther"
+dynamic = ["version"]
+description = "Metadata-driven inversion of tabulated equations of state"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9,<3.14"
+authors = [
+  { name = "Gregoire Pihan", email = "g.pihan@gmail.com" },
+]
+dependencies = [
+  "numpy>=1.23",
+  "scipy>=1.9",
+  "threadpoolctl>=3.1",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+dev = [
+  "build>=1.2",
+  "pytest>=7",
+  "wheel>=0.41",
+]
+
+[project.scripts]
+eos-trensmuther = "eos_trensmuther.cli:main"
+
+[project.urls]
+Repository = "https://github.com/gpihan/EoS-TrENsMUTher"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["eos_trensmuther"]
+namespaces = false
+
+[tool.setuptools.dynamic]
+version = { attr = "eos_trensmuther._version.__version__" }

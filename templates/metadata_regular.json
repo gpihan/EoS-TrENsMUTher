@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "name": "Replace with the EoS name",
+  "table_revision": "replace-with-data-revision",
+  "description": "Replace with a short scientific description.",
+  "dimension": 2,
+  "data_file": "table.dat",
+  "format": {
+    "delimiter": "whitespace",
+    "comment_prefix": "#",
+    "skip_rows": 0,
+    "encoding": "utf-8",
+    "expected_columns": 4,
+    "missing_values": []
+  },
+  "fields": {
+    "T": {
+      "role": "coordinate",
+      "column": 0,
+      "source_unit": "GeV",
+      "canonical_unit": "GeV"
+    },
+    "muB": {
+      "role": "coordinate",
+      "column": 1,
+      "source_unit": "GeV",
+      "canonical_unit": "GeV"
+    },
+    "e": {
+      "role": "target",
+      "column": 2,
+      "source_unit": "GeV^4",
+      "canonical_unit": "GeV^4"
+    },
+    "nB": {
+      "role": "target",
+      "column": 3,
+      "source_unit": "GeV^3",
+      "canonical_unit": "GeV^3"
+    }
+  },
+  "grid": {
+    "kind": "rectilinear",
+    "require_complete": true,
+    "require_uniform": false,
+    "reorder": true
+  },
+  "scientific": {
+    "description": "Replace with the physical model and intended use.",
+    "origin": null,
+    "publications": [],
+    "constraints": ["nQ = 0", "nS = 0"],
+    "validity": null,
+    "phase_structure": {
+      "status": "none",
+      "critical_points": [],
+      "first_order_transition": {"present": false}
+    },
+    "open_questions": []
+  }
+}

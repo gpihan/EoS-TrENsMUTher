@@ -1,0 +1,43 @@
+{
+  "name": "Synthetic LINE Region-S example",
+  "dimension": 2,
+  "data_file": "table.dat",
+  "format": {"expected_columns": 4},
+  "fields": {
+    "T": {"role": "coordinate", "column": 0, "source_unit": "GeV", "canonical_unit": "GeV"},
+    "muB": {"role": "coordinate", "column": 1, "source_unit": "GeV", "canonical_unit": "GeV"},
+    "e": {"role": "target", "column": 2, "source_unit": "GeV^4", "canonical_unit": "GeV^4"},
+    "nB": {"role": "target", "column": 3, "source_unit": "GeV^3", "canonical_unit": "GeV^3"}
+  },
+  "scientific": {
+    "description": "Synthetic LINE/Region-S fixture for demonstrations; not a physical EoS.",
+    "origin": {"generator": "hand-authored EoS-TrENsMUTher example"},
+    "publications": [],
+    "phase_structure": {
+      "status": "known",
+      "critical_points": [{
+        "name": "synthetic critical endpoint",
+        "status": "known",
+        "location": {
+          "T": {"value": 0.16, "unit": "GeV"},
+          "muB": {"value": 0.20, "unit": "GeV"}
+        }
+      }],
+      "first_order_transition": {
+        "present": true,
+        "representation": "line",
+        "kind": "synthetic congruent transition",
+        "critical_point": "synthetic critical endpoint",
+        "critical_point_tolerance": {"absolute": 1e-12, "relative": 1e-10},
+        "coexistence_data": {
+          "file": "coexistence_line.dat",
+          "expected_columns": 2,
+          "columns": {
+            "muB": {"index": 0, "unit": "GeV"},
+            "T": {"index": 1, "unit": "GeV"}
+          }
+        }
+      }
+    }
+  }
+}

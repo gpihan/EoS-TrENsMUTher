@@ -1,1 +1,30 @@
 __pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+htmlcov/
+.venv/
+venv/
+env/
+build/
+dist/
+Output/
+Output*/
+/TEMP/
+/example-output*/
+quickstart-*-output/
+# Scientific EoS tables are local/external data and are never repository content.
+/EoSTables/
+# Local one-off parameter files; maintained examples belong under examples/.
+/param*.py
+*.eosinv
+**/checkpoint/
+**/checkpoints/
+**/shared_worker_state_v1/
+**/*_shared_worker_state_v1/

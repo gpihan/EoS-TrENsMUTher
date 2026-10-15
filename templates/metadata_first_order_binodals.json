@@ -1,0 +1,36 @@
+{
+  "name": "Replace with the 2D BINODALS EoS name",
+  "dimension": 2,
+  "data_file": "table.dat",
+  "fields": {
+    "T": {"role": "coordinate", "column": 0, "source_unit": "GeV", "canonical_unit": "GeV"},
+    "muB": {"role": "coordinate", "column": 1, "source_unit": "GeV", "canonical_unit": "GeV"},
+    "e": {"role": "target", "column": 2, "source_unit": "GeV^4", "canonical_unit": "GeV^4"},
+    "nB": {"role": "target", "column": 3, "source_unit": "GeV^3", "canonical_unit": "GeV^3"},
+    "phase": {"role": "auxiliary", "column": 4, "source_unit": "dimensionless", "canonical_unit": "dimensionless"}
+  },
+  "scientific": {
+    "origin": null,
+    "publications": [],
+    "phase_structure": {
+      "status": "known",
+      "critical_points": [],
+      "first_order_transition": {
+        "present": true,
+        "representation": "binodals",
+        "kind": "replace with the scientific transition description",
+        "phase_fraction_field": "phase",
+        "mixed_phase_condition": "0 < phase < 1",
+        "coexistence_data": {
+          "file": "binodals.dat",
+          "expected_columns": 3,
+          "columns": {
+            "muB": {"index": 0, "unit": "GeV"},
+            "T_dilute": {"index": 1, "unit": "GeV"},
+            "T_dense": {"index": 2, "unit": "GeV"}
+          }
+        }
+      }
+    }
+  }
+}

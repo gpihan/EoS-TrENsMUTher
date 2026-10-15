@@ -1,0 +1,20 @@
+include README.md
+include AGENTS.md
+include LICENSE
+include CITATION.cff
+include requirements.txt
+include EoS-TrENsMUTher.py
+include image/Cover.png
+recursive-include AIutils *.md
+recursive-include docs *.md
+recursive-include examples *.md *.py *.json *.dat
+recursive-include templates *.py *.json *.md
+recursive-include utilities *.md *.py
+recursive-include tests *.py *.npz
+prune EoSTables
+prune Output_TEST
+prune TEMP
+prune checkpoints
+global-exclude .DS_Store
+global-exclude *.py[cod]
+global-exclude __pycache__

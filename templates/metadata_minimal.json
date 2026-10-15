@@ -1,0 +1,11 @@
+{
+  "name": "Replace with the table name",
+  "dimension": 2,
+  "data_file": "table.dat",
+  "fields": {
+    "T": {"role": "coordinate", "column": 0, "source_unit": "GeV", "canonical_unit": "GeV"},
+    "muB": {"role": "coordinate", "column": 1, "source_unit": "GeV", "canonical_unit": "GeV"},
+    "e": {"role": "target", "column": 2, "source_unit": "GeV^4", "canonical_unit": "GeV^4"},
+    "nB": {"role": "target", "column": 3, "source_unit": "GeV^3", "canonical_unit": "GeV^3"}
+  }
+}
