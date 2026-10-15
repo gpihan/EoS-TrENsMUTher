@@ -1,7 +1,5 @@
 # EoS-TrENsMUTher
 
-![EoS-TrENsMUTher cover](image/Cover.png?raw=true)
-
 EoS-TrENsMUTher inverts metadata-described tabulated equations of state. A
 forward table such as
 
